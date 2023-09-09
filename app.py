@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return "<center><h1>Flask App on Azure by Maher</h1></center>"
+	return render_template("index.html")
 
 
 if __name__ == "__main__":
